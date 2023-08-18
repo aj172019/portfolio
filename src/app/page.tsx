@@ -1,10 +1,10 @@
 'use client';
 import {gothic700, roboto900} from '@/fonts/fonts';
-import Indexes from "@/app/indexes/page";
-import Introduce from "@/app/introduce/page";
-import Skills from "@/app/skills/page";
-import Experience from "@/app/experience/page";
-import Contact from "@/app/contact/page";
+import Index from "@/components/index";
+import Introduce from "@/components/introduce";
+import Skills from "@/components/skills";
+import Career from "@/components/career";
+import Contact from "@/components/contact";
 import ReactFullpage from '@fullpage/react-fullpage';
 type Credits = {
     enabled?: boolean;
@@ -14,22 +14,33 @@ type Credits = {
 export default function Home() {
 
     const credits: Credits = {
-        enabled: true,
-        label: "please scroll",
-        position: "left",
+        enabled: false,
+        label: `<p class="text-gray-300">react-fullpage</p>`,
+        position: "right",
     };
+    const index = [`Title`, `Index`, `Introduce`, `Skills`, `Career`, `Contact`];
+    const tooltip : string[] = index.map((tooltipsText) => {
+
+        let tooltipWrapper = document.createElement('p');
+        tooltipWrapper.className = `text-gray-500 text-xs font-extralight`;
+        tooltipWrapper.innerHTML = tooltipsText;
+        return tooltipWrapper.outerHTML;
+    });
     return (
         <ReactFullpage
             licenseKey={`OPEN-SOURCE-GPLV3-LICENSE`}
             navigation
-            // onLeave={onLeave}
-            // sectionsColor={sectionsColor}
-            // pluginWrapper={pluginWrapper}
+            anchors={index.map((tooltipsText) => {
+                return tooltipsText.toLowerCase();
+            })}
+            // animateAnchor={true}
+            dragAndMove={'vertical'}
             debug={false}
             credits={credits}
             showActiveTooltip={true}
-            navigationTooltips={['title', 'indexes', 'introduce', 'skills', 'experience', 'contact']}
-            // anchors={['title', 'indexes', 'introduce', 'skills', 'experience', 'contact']}
+            navigationPosition={'right'}
+            // navigationTooltips={tooltip}
+            scrollOverflow={false}
             render={(comp: any) => (
                 <ReactFullpage.Wrapper>
                     <div id={`title`} className="section flex items-center h-screen">
@@ -48,10 +59,10 @@ export default function Home() {
                             </p>
                         </div>
                     </div>
-                    <Indexes/>
+                    <Index/>
                     <Introduce/>
                     <Skills/>
-                    <Experience/>
+                    <Career/>
                     <Contact/>
                 </ReactFullpage.Wrapper>
             )}
