@@ -19,13 +19,6 @@ export default function Home() {
         position: "right",
     };
     const index = [`Title`, `Index`, `Introduce`, `Skills`, `Career`, `Contact`];
-    const tooltip : string[] = index.map((tooltipsText) => {
-
-        let tooltipWrapper = document.createElement('p');
-        tooltipWrapper.className = `text-gray-500 text-xs font-extralight`;
-        tooltipWrapper.innerHTML = tooltipsText;
-        return tooltipWrapper.outerHTML;
-    });
     return (
         <ReactFullpage
             licenseKey={`OPEN-SOURCE-GPLV3-LICENSE`}
