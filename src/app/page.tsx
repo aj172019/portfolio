@@ -4,7 +4,7 @@ import Index from "@/components/index";
 import Introduce from "@/components/introduce";
 import Skills from "@/components/skills";
 import Career from "@/components/career";
-import Contact from "@/components/contact";
+import MyLink from "@/components/my-link";
 import ReactFullpage from '@fullpage/react-fullpage';
 type Credits = {
     enabled?: boolean;
@@ -36,7 +36,7 @@ export default function Home() {
             scrollOverflow={false}
             render={(comp: any) => (
                 <ReactFullpage.Wrapper>
-                    <div id={`title`} className="section flex items-center h-screen">
+                    <div className="section flex items-center h-screen">
                         <div className={`w-full py-40`}>
                             <p className={`p-3 text-2xl md:text-4xl lg:text-6xl tracking-tight ${roboto900.className}`}>
                                 제목입니다.
@@ -56,7 +56,7 @@ export default function Home() {
                     <Introduce/>
                     <Skills/>
                     <Career/>
-                    <Contact/>
+                    <MyLink/>
                 </ReactFullpage.Wrapper>
             )}
         />

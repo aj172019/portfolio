@@ -3,12 +3,12 @@ import {roboto900} from "@/fonts/fonts";
 import Link from "next/link";
 import { Icon } from '@iconify/react';
 
-export default function Contact() {
+export default function MyLink() {
 
     return (
         <div className="section flex flex-col items-center justify-center h-screen">
             <div className={`w-full text-center px-10`}>
-                <p className={`text-5xl font-bold mb-4 ${roboto900.className}`}>Contact.</p>
+                <p className={`text-5xl font-bold mb-4 ${roboto900.className}`}>Link.</p>
             </div>
             <div className="flex space-x-8">
                 {[
