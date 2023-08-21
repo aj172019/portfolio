@@ -6,6 +6,8 @@ import Skills from "@/components/skills";
 import Career from "@/components/career";
 import MyLink from "@/components/my-link";
 import ReactFullpage from '@fullpage/react-fullpage';
+import {navigationProps} from "@/components/page-props";
+
 type Credits = {
     enabled?: boolean;
     label?: string;
@@ -30,12 +32,16 @@ export default function Home() {
             dragAndMove={'vertical'}
             debug={false}
             credits={credits}
-            showActiveTooltip={true}
+            // showActiveTooltip={true}
             navigationPosition={'right'}
-            // navigationTooltips={tooltip}
+            keyboardScrolling={true}
+            scrollBar={false}
+            slidesNavigation={true}
+            // navigationTooltips={navigationProps}
             scrollOverflow={true}
             render={(comp: any) => (
                 <ReactFullpage.Wrapper>
+
                     <div className="section flex items-center h-screen">
                         <div className={`w-full py-40`}>
                             <p className={`p-3 text-2xl md:text-4xl lg:text-6xl tracking-tight ${roboto900.className}`}>

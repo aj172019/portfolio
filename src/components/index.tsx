@@ -34,7 +34,7 @@ export default function Indexes() {
                                 handleLinkClick(item.sectionIndex)
                         }} className="w-1/2 md:w-1/2 lg:w-1/4 py-4">
                             <div className={`flex flex-shrink-0 flex-col items-center text-center text-blue-600 
-                        ${item.status == 'done' ? `hover:cursor-pointer hoverContainer` : `opacity-50 cursor-default`}
+                        ${item.status == 'done' ? `hover:text-blue-300 hover:cursor-pointer hoverContainer` : `opacity-50 cursor-default`}
                         `}>
                                 <Icon className={`w-20 h-20`} icon={item.icon}/>
                                 <p className={`block p-2.5 text-2xl ${roboto900.className}`}>
