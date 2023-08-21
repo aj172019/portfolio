@@ -6,7 +6,6 @@ import Skills from "@/components/skills";
 import Career from "@/components/career";
 import MyLink from "@/components/my-link";
 import ReactFullpage from '@fullpage/react-fullpage';
-import {navigationProps} from "@/components/page-props";
 
 type Credits = {
     enabled?: boolean;
@@ -41,6 +40,8 @@ export default function Home() {
             scrollOverflow={true}
             render={(comp: any) => (
                 <ReactFullpage.Wrapper>
+
+
 
                     <div className="section flex items-center h-screen">
                         <div className={`w-full py-40`}>

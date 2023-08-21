@@ -9,7 +9,7 @@ export const headerProps = [
 ];
 export const indexProps = [
     {title: 'About', description: '나의 소개', link: 'about', icon: 'heroicons:user-solid', sectionIndex: 3, status: 'done'},
-    {title: 'Skills', description: '나의 기술', link: '/#skills', icon: 'heroicons:code-bracket', sectionIndex: 4, status: 'working'},
+    {title: 'Skills', description: '나의 기술', link: '/#skills', icon: 'heroicons:code-bracket', sectionIndex: 4, status: 'done'},
     {title: 'Career', description: '나의 경력', link: '/#career', icon: 'heroicons:newspaper-solid', sectionIndex: 5, status: 'working'},
     {title: 'Links', description: '관련 링크', link: 'link', icon: 'heroicons:link-solid', sectionIndex: 6, status: 'done'},
 ];
@@ -17,6 +17,13 @@ export const indexProps = [
 export const linksProps = [
     {title: 'GitHub', description: '@aj172019', link: 'https://github.com/aj172019/portfolio', icon: 'bi:github', sectionIndex: 3, status: 'done'},
     {title: 'Blog', description: 'Coming Soon!', link: '/#skills', icon: 'mdi:blog-outline', sectionIndex: 4, status: 'working'},
+];
+
+export const skillsProps = [
+    {title: 'Spring', description: '@aj172019', link: 'https://github.com/aj172019/ourdiary', icon: 'devicon-plain:spring', color:`text-green-500`, status: 'done'},
+    {title: 'Next.js', description: 'Coming Soon!', link: '/#skills', icon: 'devicon:nextjs', sectionIndex: 4, status: 'done'},
+    {title: 'AWS', description: 'Coming Soon!', link: '/#skills', icon: 'fontisto:aws', sectionIndex: 4, status: 'done'},
+    {title: 'RDB', description: 'Coming Soon!', link: '/#skills', icon: 'iconoir:db', sectionIndex: 4, status: 'done'},
 ];
 
 export const aboutProps = [
