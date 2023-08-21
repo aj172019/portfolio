@@ -1,7 +1,7 @@
 'use client';
 import {gothic700, roboto900} from '@/fonts/fonts';
 import Index from "@/components/index";
-import Introduce from "@/components/introduce";
+import About from "@/components/about";
 import Skills from "@/components/skills";
 import Career from "@/components/career";
 import MyLink from "@/components/my-link";
@@ -33,7 +33,7 @@ export default function Home() {
             showActiveTooltip={true}
             navigationPosition={'right'}
             // navigationTooltips={tooltip}
-            scrollOverflow={false}
+            scrollOverflow={true}
             render={(comp: any) => (
                 <ReactFullpage.Wrapper>
                     <div className="section flex items-center h-screen">
@@ -53,7 +53,7 @@ export default function Home() {
                         </div>
                     </div>
                     <Index/>
-                    <Introduce/>
+                    <About/>
                     <Skills/>
                     <Career/>
                     <MyLink/>
