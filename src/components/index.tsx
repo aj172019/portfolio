@@ -24,7 +24,7 @@ export default function Indexes() {
     }
 
     return (
-        <div className="section flex flex-col items-center justify-center h-screen px-52">
+        <div className="section flex flex-col items-center justify-center h-screen md:px-40 lg:px-52">
             <div className={`w-full text-center px-10`}>
                 <p className={`text-2xl md:text-3xl lg:text-5xl font-bold mb-4 ${roboto900.className}`}>Index.</p>
             </div>
@@ -41,8 +41,8 @@ export default function Indexes() {
                             if (item.status === 'done')
                                 handleLinkClick(item.sectionIndex)
                         }} className="w-1/2 md:w-1/2 lg:w-1/4 py-4">
-                            <div className={`flex flex-shrink-0 flex-col items-center text-center transform transition-transform duration-300 text-blue-400
-                        ${item.status == 'done' ? `hover:-translate-y-1 hover:-translate-x-1 hover:drop-shadow-md hover:text-blue-600 hover:cursor-pointer` : `opacity-50 cursor-default`}
+                            <div className={`flex flex-shrink-0 flex-col items-center text-center transform transition-transform duration-300 text-blue-600
+                        ${item.status == 'done' ? `hover:-translate-y-1 hover:-translate-x-1 hover:drop-shadow-md hover:text-blue-800 hover:cursor-pointer` : `opacity-50 cursor-default`}
                         `}>
                                 <Icon className={`w-20 h-20`}/>
                                 <p className={`block p-2.5 text-xl md:text-2xl lg:text-4xl ${roboto900.className}`}>
