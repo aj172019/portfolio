@@ -30,10 +30,10 @@ export default function Indexes() {
             </div>
             <div className="flex flex-wrap justify-center w-full">
                 {[
-                    {title: 'Introduce.', description: '나의 소개', link: '/#introduce', icon: 'introduce', sectionIndex: 3, status: 'working'},
-                    {title: 'Skills', description: '나의 기술', link: '/#skills', icon: 'skills', sectionIndex: 4, status: 'working'},
-                    {title: 'Career.', description: '나의 경력', link: '/#career', icon: 'career', sectionIndex: 5, status: 'working'},
-                    {title: 'Link.', description: '관련 링크', link: 'link', icon: 'link', sectionIndex: 6, status: 'done'},
+                    {title: '#Introduce', description: '나의 소개', link: '/#introduce', icon: 'introduce', sectionIndex: 3, status: 'working'},
+                    {title: '#Skills', description: '나의 기술', link: '/#skills', icon: 'skills', sectionIndex: 4, status: 'working'},
+                    {title: '#Career', description: '나의 경력', link: '/#career', icon: 'career', sectionIndex: 5, status: 'working'},
+                    {title: '#Link', description: '관련 링크', link: 'link', icon: 'link', sectionIndex: 6, status: 'done'},
                 ].map((item, index) => {
                     const Icon = icons[item.icon];
                     return (
@@ -45,10 +45,10 @@ export default function Indexes() {
                         ${item.status == 'done' ? `hover:-translate-y-1 hover:-translate-x-1 hover:drop-shadow-md hover:text-blue-800 hover:cursor-pointer` : `opacity-50 cursor-default`}
                         `}>
                                 <Icon className={`w-20 h-20`}/>
-                                <p className={`block p-2.5 text-xl md:text-2xl lg:text-4xl ${roboto900.className}`}>
+                                <p className={`block p-2.5 text-xl md:text-2xl lg:text-4xl underline ${roboto900.className}`}>
                                     {item.title}
                                 </p>
-                                <p className={`text-gray-400 text-sm md:text-md lg:text-lg font-extralight tracking-tighter whitespace-pre-line`}>
+                                <p className={`text-gray-400 text-sm md:text-md lg:text-lg font-extralight tracking-tighter whitespace-pre-line no-underline`}>
                                     {item.description}
                                 </p>
                             </div>
