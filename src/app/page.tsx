@@ -27,22 +27,16 @@ export default function Home() {
             anchors={index.map((tooltipsText) => {
                 return tooltipsText.toLowerCase();
             })}
-            // animateAnchor={true}
             dragAndMove={'vertical'}
             debug={false}
             credits={credits}
-            // showActiveTooltip={true}
             navigationPosition={'right'}
             keyboardScrolling={true}
-            scrollBar={false}
             slidesNavigation={true}
-            // navigationTooltips={navigationProps}
             scrollOverflow={true}
+            scrollOverflowReset={true}
             render={(comp: any) => (
                 <ReactFullpage.Wrapper>
-
-
-
                     <div className="section flex items-center h-screen">
                         <div className={`w-full py-40`}>
                             <p className={`p-3 text-2xl md:text-4xl lg:text-6xl tracking-tight ${roboto900.className}`}>

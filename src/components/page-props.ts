@@ -20,10 +20,11 @@ export const linksProps = [
 ];
 
 export const skillsProps = [
-    {title: 'Spring', description: '@aj172019', link: 'https://github.com/aj172019/ourdiary', icon: 'devicon-plain:spring', color:`text-green-500`, status: 'done'},
-    {title: 'Next.js', description: 'Coming Soon!', link: '/#skills', icon: 'devicon:nextjs', sectionIndex: 4, status: 'done'},
-    {title: 'AWS', description: 'Coming Soon!', link: '/#skills', icon: 'fontisto:aws', sectionIndex: 4, status: 'done'},
-    {title: 'RDB', description: 'Coming Soon!', link: '/#skills', icon: 'iconoir:db', sectionIndex: 4, status: 'done'},
+    {title: 'Java', description: '', links: [{name:'/ourdiary', link:'https://github.com/aj172019/ourdiary'}], icon: 'logos:java', status: 'done'},
+    {title: 'Spring', description: '@aj172019', links: [{name:'/ourdiary', link:'https://github.com/aj172019/ourdiary'}], icon: 'devicon:spring', status: 'done'},
+    {title: 'Next.js', description: 'Coming Soon!', links: [{name:'none', link:'/#skills'}], icon: 'logos:nextjs-icon', sectionIndex: 4, status: 'done'},
+    {title: 'AWS', description: 'Coming Soon!', links: [{name:'none', link:'/#skills'}], icon: 'logos:aws', sectionIndex: 4, status: 'done'},
+    {title: 'RDB', description: 'Coming Soon!', links: [{name:'none', link:'/#skills'}], icon: 'bi:database-fill', sectionIndex: 4, status: 'done'},
 ];
 
 export const aboutProps = [
