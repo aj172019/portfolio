@@ -14,7 +14,7 @@ module.exports = {
     safelist: [
         'text-3xl',
         'text-5xl',
-        'w-1/2',
+        'sm:w-1/2',
         'md:w-1/3',
         'lg:w-1/5',
     ]

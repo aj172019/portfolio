@@ -13,7 +13,7 @@ export interface ResponsiveGridColumnCountProps {
     '2xl'?: number; // Even larger devices (if applicable)
 }
 
-export default function Card({index, cardProps, responsiveGridColumnCount = {sm: 2, md: 3, lg: 4, xl: 5, xxl: 6}}: {
+export default function Card({index, cardProps, responsiveGridColumnCount = {'sm': 2, 'md': 3, 'lg': 4, 'xl': 5, '2xl': 6}}: {
     index: number,
     cardProps: CardProps,
     responsiveGridColumnCount?: ResponsiveGridColumnCountProps
