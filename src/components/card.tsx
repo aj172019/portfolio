@@ -18,17 +18,9 @@ export default function Card({index, cardProps, responsiveGridColumnCount = {'sm
     cardProps: CardProps,
     responsiveGridColumnCount?: ResponsiveGridColumnCountProps
 }) {
-    const columnCountClassName = () => {
-        let className : string = '';
-        for (let key in responsiveGridColumnCount) {
-            if (responsiveGridColumnCount.hasOwnProperty(key)) {
-                className += `${key}:w-1/${responsiveGridColumnCount[key]} `;
-            }
-        }
-        return className;
-    }
+
     return (
-        <div key={index} className={`${columnCountClassName()} py-4`}>
+        <div key={index} className={`w-1/2 md:w-1/3 lg:w-1/5 py-4`}>
             <div className={`flex flex-col items-center `}>
                 <Icon className={`w-20 h-20`} icon={cardProps.icon}/>
                 <div className={`py-2.5`}>
