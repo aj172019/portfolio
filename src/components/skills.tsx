@@ -7,9 +7,9 @@ import CardGrid from "@/components/card-grid";
 
 export default function Skills() {
     const responsiveGridColumnCountProps = {
-        sm: 2,
-        md: 3,
-        lg: 5,
+        'sm': 2,
+        'md': 3,
+        'lg': 5,
     }
     return (
         <div className={`section flex flex-col justify-center h-screen`}>
