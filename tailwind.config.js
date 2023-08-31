@@ -15,7 +15,7 @@ module.exports = {
         'text-3xl',
         'text-5xl',
         'w-1/2',
-        'w-1/3',
-        'w-1/5',
+        'md:w-1/3',
+        'lg:w-1/5',
     ]
 }
