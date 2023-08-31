@@ -1,17 +1,17 @@
 import {roboto900} from "@/fonts/fonts";
 import {aboutProps} from "@/components/page-props";
 import {Icon} from "@iconify/react";
+import ChapterTitle from "@/components/chapter-title";
 
 export default function About() {
 
     return (
-        <div className="section flex flex-col h-screen items-baseline justify-start">
-            <div className={`px-5`}>
-                <div
-                    className={`flex flex-row items-center justify-center md:justify-normal lg:justify-normal w-full h-auto p-2 md:p-5 lg:p-5 border-b-2 border-gray-200 text-3xl font-bold ${roboto900.className}`}>
-                    <Icon icon={'heroicons:user-solid'}/>
-                    <span>About</span>
-                </div>
+        <div className="section flex flex-col h-screen items-center justify-start">
+            <div className={`flex flex-row items-center justify-center px-10 py-7`}>
+                <ChapterTitle title={`About`} icon={`heroicons:user-solid`} size={`3xl`}/>
+            </div>
+            <div className={`w-screen px-5`}>
+                <div>
                 {
                     aboutProps.map((item, index) => {
                         return (
@@ -26,6 +26,7 @@ export default function About() {
                         )
                     })
                 }
+                </div>
             </div>
         </div>
     )

@@ -1,17 +1,14 @@
-'use client';
 import {roboto900} from "@/fonts/fonts";
 import Link from "next/link";
 import { Icon } from '@iconify/react';
 import {linksProps} from "@/components/page-props";
+import ChapterTitle from "@/components/chapter-title";
 
 export default function MyLink() {
     return (
         <div className={`section flex flex-col justify-center h-screen ${linksProps.length > 2 && 'items-center'}`}>
-            <div className={`flex flex-col items-center text-center px-10`}>
-                <div className={`flex flex-row items-center text-5xl font-bold mb-4 ${roboto900.className}`}>
-                    <Icon icon={'heroicons:link-solid'}/>
-                    <span>Links</span>
-                </div>
+            <div className={`flex flex-col items-center lg:pb-20`}>
+                <ChapterTitle title={`Links`} icon={`heroicons:link-solid`}/>
             </div>
             <div className="flex flex-wrap justify-center sm:w-full lg:w-screen sm:px-36 md:px-48 lg:px-52">
                 {linksProps.map((item, index) => {

@@ -1,3 +1,5 @@
+import {CardProps} from "@/components/card-grid";
+
 
 export const headerProps = [
     {title: '#About', description: '나에 대해 알아보기', link: '/#about', icon: 'heroicons:information-circle-solid', sectionIndex: 1, status: 'done'},
@@ -7,11 +9,17 @@ export const headerProps = [
     {title: '#Career', description: '나의 경력', link: '/#career', icon: 'heroicons:newspaper-solid', sectionIndex: 5, status: 'working'},
     {title: '#Links', description: '관련 링크', link: 'link', icon: 'heroicons:link-solid', sectionIndex: 6, status: 'done'},
 ];
-export const indexProps = [
-    {title: 'About', description: '나의 소개', link: 'about', icon: 'heroicons:user-solid', sectionIndex: 3, status: 'done'},
-    {title: 'Skills', description: '나의 기술', link: '/#skills', icon: 'heroicons:code-bracket', sectionIndex: 4, status: 'done'},
-    {title: 'Career', description: '나의 경력', link: '/#career', icon: 'heroicons:newspaper-solid', sectionIndex: 5, status: 'working'},
-    {title: 'Links', description: '관련 링크', link: 'link', icon: 'heroicons:link-solid', sectionIndex: 6, status: 'done'},
+
+interface IndexProps extends CardProps {
+    link: string,
+    sectionIndex: number,
+}
+export const indexProps : IndexProps[]  = [
+    {title: 'Home', description: '나의 소개', link: 'about', icon: 'heroicons:home-solid', sectionIndex: 1, },
+    {title: 'About', description: '나의 소개', link: 'about', icon: 'heroicons:user-solid', sectionIndex: 2, },
+    {title: 'Skills', description: '나의 기술', link: '/#skills', icon: 'heroicons:code-bracket', sectionIndex: 3, },
+    {title: 'Career', description: '나의 경력', link: '/#career', icon: 'heroicons:briefcase-solid', sectionIndex: 4, },
+    {title: 'Links', description: '관련 링크', link: 'link', icon: 'heroicons:link-solid', sectionIndex: 5, },
 ];
 
 export const linksProps = [
