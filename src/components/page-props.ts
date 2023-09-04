@@ -28,10 +28,10 @@ interface IndexProps extends CardProps {
     link: string,
 }
 export const indexProps : IndexProps[]  = [
-    {title: 'Home', description: '나의 소개', link: '/', icon: BiSolidHome},
-    {title: 'About', description: '나의 소개', link: '/about', icon: BiSolidUser},
-    {title: 'Skills', description: '나의 기술', link: '/skills', icon: HiCodeBracket},
-    {title: 'Career', description: '나의 경력', link: '/career', icon: BiSolidBriefcase},
+    {title: 'Home', description: '나의 소개', link: 'welcome', icon: BiSolidHome},
+    {title: 'About', description: '나의 소개', link: 'about', icon: BiSolidUser},
+    {title: 'Skills', description: '나의 기술', link: 'skills', icon: HiCodeBracket},
+    {title: 'Career', description: '나의 경력', link: 'career', icon: BiSolidBriefcase},
     // {title: 'Links', description: '관련 링크', link: 'link', icon: 'heroicons:link-solid', sectionIndex: 5, },
 ];
 

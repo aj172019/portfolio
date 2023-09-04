@@ -11,8 +11,8 @@ export default function Skills() {
         lg: 5,
     }
     return (
-        <div className={`flex flex-col justify-center h-screen`}>
-            <div className={`flex flex-col items-center pb-10 lg:pb-20`}>
+        <div className={`flex flex-col justify-center`}>
+            <div className={`flex flex-col items-center py-10 lg:pb-20`}>
                 <ChapterTitle title={`Skills`} icon={HiCodeBracket}/>
             </div>
             <CardGrid cardPropsList={skillsProps} responsiveGridColumnCountProps={responsiveGridColumnCountProps}/>

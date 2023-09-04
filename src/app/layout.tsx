@@ -13,13 +13,8 @@ export default function RootLayout({children}: {
 }) {
     return (
         <html>
-        <body className={`${roboto300.className} flex flex-col h-screen overflow-hidden`}>
-        <div className="flex-1 overflow-y-auto overflow-x-hidden">
-            {children}
-        </div>
-        <div className="relative">
-            <IndexBar/>
-        </div>
+        <body className={`${roboto300.className}`}>
+        {children}
         </body>
         </html>
     )

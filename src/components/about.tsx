@@ -7,7 +7,7 @@ import {BiSolidUser} from "react-icons/bi";
 export default function About() {
 
     return (
-        <div className="flex flex-col h-screen items-center justify-start">
+        <div className="flex flex-col items-center justify-center">
             <div className={`flex flex-row items-center justify-center px-10 py-7`}>
                 <ChapterTitle title={`About`} icon={BiSolidUser} size={`3xl`}/>
             </div>
