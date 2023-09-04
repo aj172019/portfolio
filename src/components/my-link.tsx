@@ -8,7 +8,7 @@ export default function MyLink() {
     return (
         <div className={`flex flex-col justify-center h-screen ${linksProps.length > 2 && 'items-center'}`}>
             <div className={`flex flex-col items-center lg:pb-20`}>
-                <ChapterTitle title={`Links`} icon={`heroicons:link-solid`}/>
+                {/*<ChapterTitle title={`Links`} icon={`heroicons:link-solid`}/>*/}
             </div>
             <div className="flex flex-wrap justify-center sm:w-full lg:w-screen sm:px-36 md:px-48 lg:px-52">
                 {linksProps.map((item, index) => {
