@@ -7,6 +7,7 @@ import Career from "@/components/career";
 export default function Home() {
     return (
         <div>
+
             <div id={`welcome`} className={`pb-20`}>
                 <Welcome/>
             </div>
