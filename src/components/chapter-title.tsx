@@ -1,16 +1,16 @@
 import {roboto900} from "@/fonts/fonts";
-import {Icon} from "@iconify/react";
+import {IconType} from "react-icons/lib";
 
 interface ChapterTitleProps {
     title: string,
-    icon: string,
+    icon: IconType,
     size?: 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '5xl'
 }
 
-export default function ChapterTitle({title, icon, size = '5xl'}: ChapterTitleProps) {
+export default function ChapterTitle({title, icon: IconComponent, size = '5xl'}: ChapterTitleProps) {
     return (
         <div className={`flex flex-row items-center text-${size}`}>
-            <Icon icon={icon}/>
+            <IconComponent className={`mr-3`}/>
             <span className={`${roboto900.className}`}>{title}</span>
         </div>
     )

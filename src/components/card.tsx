@@ -22,7 +22,7 @@ export default function Card({index, cardProps, responsiveGridColumnCount = {'sm
     return (
         <div key={index} className={`w-1/2 md:w-1/3 lg:w-1/5 py-4`}>
             <div className={`flex flex-col items-center `}>
-                <Icon className={`w-20 h-20`} icon={cardProps.icon}/>
+                <cardProps.icon className={`w-20 h-20`}/>
                 <div className={`py-2.5`}>
                     <span className={`text-2xl ${roboto900.className}`}>{cardProps.title}</span>
                 </div>

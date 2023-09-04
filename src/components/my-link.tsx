@@ -6,7 +6,7 @@ import ChapterTitle from "@/components/chapter-title";
 
 export default function MyLink() {
     return (
-        <div className={`section flex flex-col justify-center h-screen ${linksProps.length > 2 && 'items-center'}`}>
+        <div className={`flex flex-col justify-center h-screen ${linksProps.length > 2 && 'items-center'}`}>
             <div className={`flex flex-col items-center lg:pb-20`}>
                 <ChapterTitle title={`Links`} icon={`heroicons:link-solid`}/>
             </div>

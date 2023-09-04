@@ -1,6 +1,7 @@
 import './globals.css'
 import type {Metadata} from 'next'
 import {roboto300} from "@/fonts/fonts";
+import IndexBar from "@/components/index-bar";
 
 export const metadata: Metadata = {
     title: 'Hello, World!',
@@ -12,8 +13,13 @@ export default function RootLayout({children}: {
 }) {
     return (
         <html>
-        <body className={roboto300.className}>
-        {children}
+        <body className={`${roboto300.className} flex flex-col h-screen overflow-hidden`}>
+        <div className="flex-1 overflow-y-auto">
+            {children}
+        </div>
+        <div className="relative">
+            <IndexBar/>
+        </div>
         </body>
         </html>
     )

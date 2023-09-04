@@ -1,4 +1,18 @@
 import {CardProps} from "@/components/card-grid";
+import {AiFillHome} from "react-icons/ai";
+import {IconType} from "react-icons/lib";
+import {
+    BiLogoAws,
+    BiLogoJava,
+    BiLogoSpringBoot,
+    BiSolidBriefcase,
+    BiSolidDisc,
+    BiSolidHome,
+    BiSolidUser
+} from "react-icons/bi";
+import {HiCodeBracket} from "react-icons/hi2";
+import {SiNextdotjs} from "react-icons/si";
+import {BsFillDatabaseFill} from "react-icons/bs";
 
 
 export const headerProps = [
@@ -12,14 +26,13 @@ export const headerProps = [
 
 interface IndexProps extends CardProps {
     link: string,
-    sectionIndex: number,
 }
 export const indexProps : IndexProps[]  = [
-    {title: 'Home', description: '나의 소개', link: 'about', icon: 'heroicons:home-solid', sectionIndex: 1, },
-    {title: 'About', description: '나의 소개', link: 'about', icon: 'heroicons:user-solid', sectionIndex: 2, },
-    {title: 'Skills', description: '나의 기술', link: '/#skills', icon: 'heroicons:code-bracket', sectionIndex: 3, },
-    {title: 'Career', description: '나의 경력', link: '/#career', icon: 'heroicons:briefcase-solid', sectionIndex: 4, },
-    {title: 'Links', description: '관련 링크', link: 'link', icon: 'heroicons:link-solid', sectionIndex: 5, },
+    {title: 'Home', description: '나의 소개', link: '/', icon: BiSolidHome},
+    {title: 'About', description: '나의 소개', link: '/about', icon: BiSolidUser},
+    {title: 'Skills', description: '나의 기술', link: '/skills', icon: HiCodeBracket},
+    {title: 'Career', description: '나의 경력', link: '/career', icon: BiSolidBriefcase},
+    // {title: 'Links', description: '관련 링크', link: 'link', icon: 'heroicons:link-solid', sectionIndex: 5, },
 ];
 
 export const linksProps = [
@@ -27,34 +40,38 @@ export const linksProps = [
     {title: 'Blog', description: 'Coming Soon!', link: '/#skills', icon: 'mdi:blog-outline', sectionIndex: 4, status: 'working'},
 ];
 
-export const skillsProps = [
-    {title: 'Java', description: '', links: [{name:'/ourdiary', link:'https://github.com/aj172019/ourdiary'}], icon: 'logos:java', status: 'done'},
-    {title: 'Spring', description: '@aj172019', links: [{name:'/ourdiary', link:'https://github.com/aj172019/ourdiary'}], icon: 'devicon:spring', status: 'done'},
-    {title: 'Next.js', description: 'Coming Soon!', links: [{name:'none', link:'/#skills'}], icon: 'logos:nextjs-icon', sectionIndex: 4, status: 'done'},
-    {title: 'AWS', description: 'Coming Soon!', links: [{name:'none', link:'/#skills'}], icon: 'logos:aws', sectionIndex: 4, status: 'done'},
-    {title: 'RDB', description: 'Coming Soon!', links: [{name:'none', link:'/#skills'}], icon: 'bi:database-fill', sectionIndex: 4, status: 'done'},
+interface SkillsProps extends CardProps {
+    links: [{ name: string, link: string }],
+}
+
+export const skillsProps : SkillsProps[] = [
+    {title: 'Java', description: '', links: [{name:'/ourdiary', link:'https://github.com/aj172019/ourdiary'}], icon: BiLogoJava},
+    {title: 'Spring', description: '@aj172019', links: [{name:'/ourdiary', link:'https://github.com/aj172019/ourdiary'}], icon: BiLogoSpringBoot},
+    {title: 'Next.js', description: 'Coming Soon!', links: [{name:'none', link:'/#skills'}], icon: SiNextdotjs},
+    {title: 'AWS', description: 'Coming Soon!', links: [{name:'none', link:'/#skills'}], icon: BiLogoAws},
+    {title: 'RDB', description: 'Coming Soon!', links: [{name:'none', link:'/#skills'}], icon: BsFillDatabaseFill},
 ];
 
 export const aboutProps = [
     {
         title: '들 사람 얼',
         description: '요(堯)는 천하를 얻어 임금이 된 다음, 세상에서 자기의 다스림을 어찌 아나 알아보려고, 한번은 시골로 나갔다. 밭에서 노래를 부르며 일하는 농사꾼을 보고 슬쩍, "당신은 우리 나라 임금을 아시오." 했다. 농부가 그 말을 듣고 거들떠보지도 않고 흙덩이만 까면서 하는 말이, "아 내가 해 뜨면 나오구, 해 지면 들어가구, 내 손으로 우물 파 물 마시구, 밭 갈아 밥 먹구 사는데, 임금이구 뭐구 상관이 뭐야?" 했다. 요는 속으로 \'내가 나 있는 줄 모르리만큼 했으니, 어지간히 하기는 했구나!\'하면서도, 아무래도 마음이 시원치가 못했다',
-        icon: 'heroicons:chevron-double-up'
+        icon: BiSolidDisc
     },
     {
         title: '들 사람 얼',
         description: '요(堯)는 천하를 얻어 임금이 된 다음, 세상에서 자기의 다스림을 어찌 아나 알아보려고, 한번은 시골로 나갔다. 밭에서 노래를 부르며 일하는 농사꾼을 보고 슬쩍, "당신은 우리 나라 임금을 아시오." 했다. 농부가 그 말을 듣고 거들떠보지도 않고 흙덩이만 까면서 하는 말이, "아 내가 해 뜨면 나오구, 해 지면 들어가구, 내 손으로 우물 파 물 마시구, 밭 갈아 밥 먹구 사는데, 임금이구 뭐구 상관이 뭐야?" 했다. 요는 속으로 \'내가 나 있는 줄 모르리만큼 했으니, 어지간히 하기는 했구나!\'하면서도, 아무래도 마음이 시원치가 못했다',
-        icon: 'heroicons:chevron-double-up'
+        icon: BiSolidDisc
     },
     {
         title: '들 사람 얼',
         description: '요(堯)는 천하를 얻어 임금이 된 다음, 세상에서 자기의 다스림을 어찌 아나 알아보려고, 한번은 시골로 나갔다. 밭에서 노래를 부르며 일하는 농사꾼을 보고 슬쩍, "당신은 우리 나라 임금을 아시오." 했다. 농부가 그 말을 듣고 거들떠보지도 않고 흙덩이만 까면서 하는 말이, "아 내가 해 뜨면 나오구, 해 지면 들어가구, 내 손으로 우물 파 물 마시구, 밭 갈아 밥 먹구 사는데, 임금이구 뭐구 상관이 뭐야?" 했다. 요는 속으로 \'내가 나 있는 줄 모르리만큼 했으니, 어지간히 하기는 했구나!\'하면서도, 아무래도 마음이 시원치가 못했다',
-        icon: 'heroicons:chevron-double-up'
+        icon: BiSolidDisc
     },
     {
         title: '들 사람 얼',
         description: '요(堯)는 천하를 얻어 임금이 된 다음, 세상에서 자기의 다스림을 어찌 아나 알아보려고, 한번은 시골로 나갔다. 밭에서 노래를 부르며 일하는 농사꾼을 보고 슬쩍, "당신은 우리 나라 임금을 아시오." 했다. 농부가 그 말을 듣고 거들떠보지도 않고 흙덩이만 까면서 하는 말이, "아 내가 해 뜨면 나오구, 해 지면 들어가구, 내 손으로 우물 파 물 마시구, 밭 갈아 밥 먹구 사는데, 임금이구 뭐구 상관이 뭐야?" 했다. 요는 속으로 \'내가 나 있는 줄 모르리만큼 했으니, 어지간히 하기는 했구나!\'하면서도, 아무래도 마음이 시원치가 못했다',
-        icon: 'heroicons:chevron-double-up'
+        icon: BiSolidDisc
     },
 ];
 
