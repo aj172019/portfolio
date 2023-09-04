@@ -11,7 +11,7 @@ export default function About() {
             <div className={`flex flex-row items-center justify-center px-10 py-7`}>
                 <ChapterTitle title={`About`} icon={BiSolidUser} size={`3xl`}/>
             </div>
-            <div className={`w-screen px-5`}>
+            <div className={`px-5`}>
                 <div>
                 {
                     aboutProps.map((item, index) => {
