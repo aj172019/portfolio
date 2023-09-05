@@ -9,7 +9,7 @@ interface ChapterTitleProps {
 
 export default function ChapterTitle({title, icon: IconComponent, size = '5xl'}: ChapterTitleProps) {
     return (
-        <div className={`flex flex-row items-center text-${size}`}>
+        <div className={`flex flex-row items-center text-3xl`}>
             <IconComponent className={`mr-3`}/>
             <span className={`${roboto900.className}`}>{title}</span>
         </div>

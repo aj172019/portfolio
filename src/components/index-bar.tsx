@@ -3,21 +3,10 @@
 import {indexProps} from "@/components/page-props";
 import {Events, Link as ScrollLink} from "react-scroll";
 import {useEffect, useState} from "react";
+import {useViewport} from "@/context/viev-port-provider";
 
 export default function IndexBar() {
-    const [activeSection, setActiveSection] = useState<string | null>(null);
-
-    useEffect(() => {
-        // 스크롤 이벤트 리스너를 추가
-        Events.scrollEvent.register('begin', function (to: string) {
-            setActiveSection(to);
-        });
-
-        return () => {
-            // 컴포넌트가 unmount될 때 리스너를 제거
-            Events.scrollEvent.remove('begin');
-        };
-    }, []);
+    const {activeSection} = useViewport();
 
 
     return (
@@ -31,7 +20,7 @@ export default function IndexBar() {
                         smooth={true}
                         duration={500}
                         className={`flex flex-col items-center text-center hover:text-gray-500 
-                        ${activeSection === item.link ? `text-blue-500` : `text-gray-400`}
+                          ${activeSection === item.link ? `text-blue-500` : `text-gray-400`}
                         `}
                     >
                         <item.icon/>

@@ -2,6 +2,7 @@ import './globals.css'
 import type {Metadata} from 'next'
 import {roboto300} from "@/fonts/fonts";
 import IndexBar from "@/components/index-bar";
+import ViewportProvider from "@/context/viev-port-provider";
 
 export const metadata: Metadata = {
     title: 'Hello, World!',
@@ -14,7 +15,9 @@ export default function RootLayout({children}: {
     return (
         <html>
         <body className={`${roboto300.className}`}>
+        <ViewportProvider>
         {children}
+        </ViewportProvider>
         </body>
         </html>
     )
