@@ -30,16 +30,16 @@ export default function Home() {
     console.log('isCareerInViewport: ', isCareerInViewport);
     return (
         <div>
-            <div ref={welcomeRef} id={`welcome`} className={`pb-20`}>
+            <div ref={welcomeRef} id={`welcome`} className={`flex flex-col justify-center min-h-screen`}>
                 <Welcome/>
             </div>
-            <div ref={aboutRef} id={`about`} className={`pb-20`}>
+            <div ref={aboutRef} id={`about`} className={`flex flex-col justify-center min-h-screen`}>
                 <About/>
             </div>
-            <div ref={skillsRef} id={`skills`} className={`pb-20`}>
+            <div ref={skillsRef} id={`skills`} className={`flex flex-col justify-center min-h-screen`}>
             <Skills/>
             </div>
-            <div ref={careerRef} id={`career`} className={`pb-20`}>
+            <div ref={careerRef} id={`career`} className={`flex flex-col justify-center min-h-screen`}>
                 <Career/>
             </div>
             <IndexBar/>

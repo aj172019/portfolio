@@ -3,7 +3,7 @@ import {roboto900} from "@/fonts/fonts";
 
 export default function Welcome() {
     return (
-        <div className="flex items-center h-screen">
+        <div className="flex flex-col items-center">
             <div className={`w-full py-40`}>
                 <p className={`p-3 text-2xl md:text-4xl lg:text-6xl tracking-tight ${roboto900.className}`}>
                     제목입니다.
