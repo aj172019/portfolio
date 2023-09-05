@@ -59,6 +59,10 @@ function useIsInViewport(ref: React.RefObject<HTMLElement>, sectionName: string)
             if (isNowIntersecting) {
                 setActiveSection(sectionName);
             }
+        }, {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.5,
         });
 
         if (ref.current) {
