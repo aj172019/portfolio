@@ -1,8 +1,7 @@
-'use client'
+
 
 import {indexProps} from "@/components/page-props";
 import {Events, Link as ScrollLink} from "react-scroll";
-import {useEffect, useState} from "react";
 import {useViewport} from "@/context/viev-port-provider";
 
 export default function IndexBar() {

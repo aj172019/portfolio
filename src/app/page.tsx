@@ -51,15 +51,16 @@ function useIsInViewport(ref: React.RefObject<HTMLElement>, sectionName: string)
     const { setActiveSection } = useViewport();
     const [isIntersecting, setIsIntersecting] = useState(false);
 
-    const observer = useMemo(() => new IntersectionObserver(([entry]) => {
-        const isNowIntersecting = entry.isIntersecting;
-        setIsIntersecting(isNowIntersecting);
-        if (isNowIntersecting) {
-            setActiveSection(sectionName);
-        }
-    }), [sectionName, setActiveSection]);
-
     useEffect(() => {
+        // 이제 IntersectionObserver는 클라이언트 사이드에서만 초기화됩니다.
+        const observer = new IntersectionObserver(([entry]) => {
+            const isNowIntersecting = entry.isIntersecting;
+            setIsIntersecting(isNowIntersecting);
+            if (isNowIntersecting) {
+                setActiveSection(sectionName);
+            }
+        });
+
         if (ref.current) {
             observer.observe(ref.current);
         }
@@ -67,10 +68,11 @@ function useIsInViewport(ref: React.RefObject<HTMLElement>, sectionName: string)
         return () => {
             observer.disconnect();
         };
-    }, [ref, observer]);
+    }, [ref, sectionName, setActiveSection]);
 
     return isIntersecting;
 }
+
 
 
 
