@@ -10,7 +10,7 @@ export default function IndexBar() {
 
     return (
         <div className="fixed flex flex-col items-center justify-center bottom-0 w-full">
-            <div className="flex justify-around w-full bg-platinum bg-opacity-90 p-2 pt-3 shadow-md">
+            <div className="flex justify-around w-full bg-platinum bg-opacity-90 p-5 shadow-md">
                 {indexProps.map((item, index) => (
 
                     <ScrollLink
@@ -23,7 +23,7 @@ export default function IndexBar() {
                         `}
                     >
                         <item.icon/>
-                        <div className="text-xs leading-0">{item.title}</div>
+                        {/*<div className="text-xs leading-0">{item.title}</div>*/}
                     </ScrollLink>
                 ))}
             </div>

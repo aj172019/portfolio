@@ -2,6 +2,8 @@ import {
     notoSansKr400,
     notoSansKr900,
 } from "@/fonts/fonts";
+import {BiSolidArrowToBottom} from "react-icons/bi";
+import {BsChevronDoubleDown} from "react-icons/bs";
 
 export default function Welcome() {
     return (
@@ -13,6 +15,9 @@ export default function Welcome() {
                 <h2 className={`text-xl text-gray-500 font-light tracking-tight ${notoSansKr400.className} text-custom-gray`}>
                     Java, Spring 개발자
                 </h2>
+            </div>
+            <div className={`absolute inset-x-0 text-center`} style={{bottom:'15%'}}>
+                <p className={`text-platinum ${notoSansKr400.className} animate-blink`}>스크롤을 내려주세요</p>
             </div>
         </div>
     )

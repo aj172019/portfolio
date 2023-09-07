@@ -7,10 +7,32 @@ module.exports = {
     ],
     theme: {
         extend: {
+            textShadow: {
+                'default': '2px 2px 4px rgba(0, 0, 0, 0.1)',
+                'lg': '4px 4px 6px rgba(0, 0, 0, 0.1)',
+                // ... 기타 원하는 그림자 스타일 추가
+            },
+            keyframes: {
+                blink: {
+                    '0%, 100%': { opacity: '0.2' },
+                    '50%': { opacity: '1' },
+                },
+            },
+            animation: {
+                blink: 'blink 1.5s infinite',
+            },
             backgroundColor: {
                 'dark-navy': '#1D1F3F',
                 'light-gray': '#B0B0B0',
                 'platinum': '#E5E5E5',
+            },
+            borderColor: {
+                'navy': '#0F1C2E',
+                'platinum': '#E5E5E5',
+                'highlight': '#FFA500',
+                'custom-gray': '#A9A9A9',
+                'coral': '#FF6B6B',
+                'turquoise': '#40E0D0'
             },
             textColor: {
                 'navy': '#0F1C2E',

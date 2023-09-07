@@ -6,12 +6,12 @@ import {
     BiLogoJava,
     BiLogoSpringBoot,
     BiSolidBriefcase,
-    BiSolidDisc,
-    BiSolidHome,
+    BiSolidDisc, BiSolidFolder,
+    BiSolidHome, BiSolidLike,
     BiSolidUser
 } from "react-icons/bi";
 import {HiCodeBracket} from "react-icons/hi2";
-import {SiNextdotjs} from "react-icons/si";
+import {SiIntellijidea, SiNextdotjs} from "react-icons/si";
 import {BsFillDatabaseFill} from "react-icons/bs";
 
 
@@ -30,8 +30,10 @@ interface IndexProps extends CardProps {
 export const indexProps : IndexProps[]  = [
     {title: 'Home', description: '나의 소개', link: 'welcome', icon: BiSolidHome},
     {title: 'About', description: '나의 소개', link: 'about', icon: BiSolidUser},
+    {title: 'Comments', description: '나의 소개', link: 'comments', icon: BiSolidLike},
     {title: 'Skills', description: '나의 기술', link: 'skills', icon: HiCodeBracket},
     {title: 'Career', description: '나의 경력', link: 'career', icon: BiSolidBriefcase},
+    {title: 'Projects', description: '나의 경력', link: 'projects', icon: BiSolidFolder},
     // {title: 'Links', description: '관련 링크', link: 'link', icon: 'heroicons:link-solid', sectionIndex: 5, },
 ];
 

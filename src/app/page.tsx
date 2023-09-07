@@ -5,29 +5,32 @@ import IndexBar from "@/components/index-bar";
 import About from "@/components/about";
 import Skills from "@/components/skills";
 import Career from "@/components/career";
-import {Element} from "react-scroll";
 import {MutableRefObject, useEffect, useMemo, useRef, useState} from "react";
 import {useViewport} from "@/context/viev-port-provider";
+import Projects from "@/components/projects";
+import Comments from "@/components/comments";
 
 
 
 export default function Home() {
     const welcomeRef = useRef<HTMLDivElement | null>(null);
-    const aboutRef = useRef<HTMLDivElement | null>(null);
-    const skillsRef = useRef<HTMLDivElement | null>(null);
-    const careerRef = useRef<HTMLDivElement | null>(null);
-
     const isWelcomeInViewport = useIsInViewport(welcomeRef, 'welcome');
-    console.log('isWelcomeInViewport: ', isWelcomeInViewport);
 
+    const aboutRef = useRef<HTMLDivElement | null>(null);
     const isAboutInViewport = useIsInViewport(aboutRef, 'about');
-    console.log('isAboutInViewport: ', isAboutInViewport);
 
+    const commentsRef = useRef<HTMLDivElement | null>(null);
+    const isCommentsInViewport = useIsInViewport(commentsRef, 'comments');
+
+    const skillsRef = useRef<HTMLDivElement | null>(null);
     const isSkillsInViewport = useIsInViewport(skillsRef, 'skills');
-    console.log('isSkillsInViewport: ', isSkillsInViewport);
 
+    const careerRef = useRef<HTMLDivElement | null>(null);
     const isCareerInViewport = useIsInViewport(careerRef, 'career');
-    console.log('isCareerInViewport: ', isCareerInViewport);
+
+    const projectsRef = useRef<HTMLDivElement | null>(null);
+    const isProjectsInViewport = useIsInViewport(projectsRef, 'projects');
+
     return (
         <div className={`bg-pattern`}>
             <div ref={welcomeRef} id={`welcome`} className={`flex flex-col justify-center pb-14 min-h-screen`}>
@@ -36,11 +39,17 @@ export default function Home() {
             <div ref={aboutRef} id={`about`} className={`flex flex-col justify-center pb-14 min-h-screen`}>
                 <About/>
             </div>
+            <div ref={commentsRef} id={`comments`} className={`flex flex-col justify-center pb-14 min-h-screen`}>
+                <Comments/>
+            </div>
             <div ref={skillsRef} id={`skills`} className={`flex flex-col justify-center pb-14 min-h-screen`}>
-            <Skills/>
+                <Skills/>
             </div>
             <div ref={careerRef} id={`career`} className={`flex flex-col justify-center pb-14 min-h-screen`}>
                 <Career/>
+            </div>
+            <div ref={projectsRef} id={`projects`} className={`flex flex-col justify-center pb-14 min-h-screen`}>
+                <Projects/>
             </div>
             <IndexBar/>
         </div>
