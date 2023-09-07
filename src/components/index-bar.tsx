@@ -9,8 +9,8 @@ export default function IndexBar() {
 
 
     return (
-        <div className="fixed flex flex-col items-center bottom-0 w-full">
-            <div className="flex justify-around w-full bg-white bg-opacity-80 p-2 shadow-md">
+        <div className="fixed flex flex-col items-center justify-center bottom-0 w-full">
+            <div className="flex justify-around w-full bg-platinum bg-opacity-90 p-2 pt-3 shadow-md">
                 {indexProps.map((item, index) => (
 
                     <ScrollLink
@@ -19,11 +19,11 @@ export default function IndexBar() {
                         smooth={true}
                         duration={500}
                         className={`flex flex-col items-center text-center hover:text-gray-500 
-                          ${activeSection === item.link ? `text-blue-500` : `text-gray-400`}
+                          ${activeSection === item.link ? `text-coral` : `text-dark-navy`}
                         `}
                     >
                         <item.icon/>
-                        <div className="text-xs">{item.title}</div>
+                        <div className="text-xs leading-0">{item.title}</div>
                     </ScrollLink>
                 ))}
             </div>

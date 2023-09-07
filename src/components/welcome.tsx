@@ -1,22 +1,18 @@
-import {roboto900} from "@/fonts/fonts";
-
+import {
+    notoSansKr400,
+    notoSansKr900,
+} from "@/fonts/fonts";
 
 export default function Welcome() {
     return (
-        <div className="flex flex-col items-center">
-            <div className={`w-full py-40`}>
-                <p className={`p-3 text-2xl md:text-4xl lg:text-6xl tracking-tight ${roboto900.className}`}>
-                    제목입니다.
-                    {/*안녕하세요.*/}
-                </p>
-                <p className={`p-3 text-2xl md:text-4xl lg:text-6xl tracking-tight ${roboto900.className}`}>
-                    알맞은 제목을 써주세요.
-                    {/*개발자 안준헌 입니다.*/}
-                </p>
-                <p className={`p-3 text-gray-400 text-sm md:text-lg lg:text-2xl font-extralight tracking-tighter`}>
-                    부제목입니다. 알맞은 부제목을 써주세요.
-                    {/*Java & Spring 전문가로서, Next.js의 새로운 세계 탐험 중*/}
-                </p>
+        <div className="flex flex-col items-center"> {/* 배경색 추가 */}
+            <div className={`w-full py-7 text-center bg-opacity-70 bg-dark-navy`}>
+                <h1 className={`text-3xl leading-tight tracking-tight mb-4 ${notoSansKr900.className} text-platinum`}>
+                    안준헌의 개발자 포트폴리오
+                </h1>
+                <h2 className={`text-xl text-gray-500 font-light tracking-tight ${notoSansKr400.className} text-custom-gray`}>
+                    Java, Spring 개발자
+                </h2>
             </div>
         </div>
     )

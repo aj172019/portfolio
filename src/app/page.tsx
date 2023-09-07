@@ -29,7 +29,7 @@ export default function Home() {
     const isCareerInViewport = useIsInViewport(careerRef, 'career');
     console.log('isCareerInViewport: ', isCareerInViewport);
     return (
-        <div>
+        <div className={`bg-pattern`}>
             <div ref={welcomeRef} id={`welcome`} className={`flex flex-col justify-center min-h-screen`}>
                 <Welcome/>
             </div>
