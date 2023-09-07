@@ -30,16 +30,16 @@ export default function Home() {
     console.log('isCareerInViewport: ', isCareerInViewport);
     return (
         <div className={`bg-pattern`}>
-            <div ref={welcomeRef} id={`welcome`} className={`flex flex-col justify-center min-h-screen`}>
+            <div ref={welcomeRef} id={`welcome`} className={`flex flex-col justify-center pb-14 min-h-screen`}>
                 <Welcome/>
             </div>
-            <div ref={aboutRef} id={`about`} className={`flex flex-col justify-center min-h-screen`}>
+            <div ref={aboutRef} id={`about`} className={`flex flex-col justify-center pb-14 min-h-screen`}>
                 <About/>
             </div>
-            <div ref={skillsRef} id={`skills`} className={`flex flex-col justify-center min-h-screen`}>
+            <div ref={skillsRef} id={`skills`} className={`flex flex-col justify-center pb-14 min-h-screen`}>
             <Skills/>
             </div>
-            <div ref={careerRef} id={`career`} className={`flex flex-col justify-center min-h-screen`}>
+            <div ref={careerRef} id={`career`} className={`flex flex-col justify-center pb-14 min-h-screen`}>
                 <Career/>
             </div>
             <IndexBar/>

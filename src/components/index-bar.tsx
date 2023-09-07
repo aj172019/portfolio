@@ -18,7 +18,7 @@ export default function IndexBar() {
                         to={item.link} // 이것은 위에서 설정한 id와 일치해야 합니다. 예: "welcome", "about", "skills", 등
                         smooth={true}
                         duration={500}
-                        className={`flex flex-col items-center text-center hover:text-gray-500 
+                        className={`flex flex-col items-center text-center hover:text-coral
                           ${activeSection === item.link ? `text-coral` : `text-dark-navy`}
                         `}
                     >
