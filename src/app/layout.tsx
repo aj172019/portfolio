@@ -1,6 +1,6 @@
 import './globals.css'
 import type {Metadata} from 'next'
-import {roboto300} from "@/fonts/fonts";
+import {notoSansKr400, roboto300} from "@/fonts/fonts";
 import IndexBar from "@/components/index-bar";
 import ViewportProvider from "@/context/viev-port-provider";
 
@@ -14,7 +14,7 @@ export default function RootLayout({children}: {
 }) {
     return (
         <html>
-        <body className={`${roboto300.className}`}>
+        <body className={`${notoSansKr400.className}`} style={{wordBreak:"keep-all"}}>
         <ViewportProvider>
         {children}
         </ViewportProvider>
