@@ -7,14 +7,6 @@ module.exports = {
     ],
     theme: {
         extend: {
-            wordBreak: {
-                'keep-all': 'keep-all'
-            },
-            textShadow: {
-                'default': '2px 2px 4px rgba(0, 0, 0, 0.1)',
-                'lg': '4px 4px 6px rgba(0, 0, 0, 0.1)',
-                // ... 기타 원하는 그림자 스타일 추가
-            },
             keyframes: {
                 blink: {
                     '0%, 100%': { opacity: '0.2' },
